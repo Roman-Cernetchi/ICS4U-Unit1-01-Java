@@ -18,11 +18,11 @@ final class Log {
     /**
     * Variable Declarations.
     */
-    public static final double MAX_WEIGHT = 1100;
+    public static final int MAX_WEIGHT = 1100;
     /**
     * Variable Declarations.
     */
-    public static final double LOG_WEIGHT_PER_METER = 20;
+    public static final int LOG_WEIGHT_PER_METER = 20;
 
     /**
     * Prevents instantiation.
@@ -56,13 +56,13 @@ final class Log {
         );
 
         // Reads the input and converts it to float
-        HEIGHT_OF_LOG = Float.parseFloat(inputReader.readLine());
+        heightOfLog = Float.parseFloat(inputReader.readLine());
 
         // Calculates the max amount of logs that can fit in the truck
-        MAX_AMOUNT_OF_LOGS = MAX_WEIGHT / LOG_WEIGHT_PER_METER / HEIGHT_OF_LOG;
+        maxAmountOfLogs = (MAX_WEIGHT / LOG_WEIGHT_PER_METER) / heightOfLog;
 
         // Outputs the result of the calculation to the user
-        System.out.println("The truck can hold " + MAX_AMOUNT_OF_LOGS + " logs.");
+        System.out.println("The truck can hold " + maxAmountOfLogs + " logs.");
 
         System.out.println("\nDone.");
     }
